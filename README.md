@@ -93,3 +93,21 @@ This project contains a MIT [license](./LICENSE.md)
 * * *
 
 Formulas for calculations: https://www.omnicalculator.com/math/area#sector-area-formula
+
+
+## Future plans
+* * *
+### shapes to be added in the future
+- Sector area
+- Ellipse area
+- Trapezoid area
+- Area of a parallelogram
+- Area of a rhombus
+- Area of a kite
+- Pentagon area
+- Area of a hexagon
+- Area of an octagon
+- Area of an annulus
+- Area of a quadrilateral
+- Regular polygon area
+
