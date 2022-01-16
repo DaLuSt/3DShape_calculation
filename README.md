@@ -68,7 +68,6 @@ pip
 
 ## Getting started
 * * *
-How to run the code?
 
 
 ## Requirements
