@@ -5,7 +5,7 @@ A module with functions for the calculation of volume, Curved surface are and To
 
 ## Description
 * * *
-# Volume: Calculate the volume for 3D shapes
+### Volume: Calculate the volume for 3D shapes
 - calculate_volume_cube
 - calculate_volume_cuboid
 - calculate_volume_cylinder
@@ -13,7 +13,7 @@ A module with functions for the calculation of volume, Curved surface are and To
 - calculate_volume_sphere
 - calculate_volume_hemisphere
 
-# CurvedSurfaceArea: Calculate the curved surface area for 3D shapes
+### CurvedSurfaceArea: Calculate the curved surface area for 3D shapes
 - calculate_curved_area_cube
 - calculate_curved_area_cuboid
 - calculate_curved_area_cylinder
@@ -21,13 +21,13 @@ A module with functions for the calculation of volume, Curved surface are and To
 - calculate_curved_area_sphere
 - calculate_curved_area_hemisphere
 
-## SurfaceArea: Calculate the total surface area of shapes and 3D shapes
-### Shapes: 
+### SurfaceArea: Calculate the total surface area of shapes and 3D shapes
+#### Shapes: 
 - calculate_area_sqaure
 - calculate_area_rectangle
 - calculate_area_circle
 - calculate_area_triagle
-### 3D Shapes:
+#### 3D Shapes:
 - calculate_area_cube
 - calculate_area_cuboid
 - calculate_area_cylinder
