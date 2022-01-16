@@ -1,6 +1,6 @@
 # 3D Shape Calculations
 * * *
-A module with functions for the calculation of volume, Curved surface are and Total surface area of 3D shapes
+A module with functions for the calculation of volume, Curved surface area and Total surface area of 3D shapes
 
 
 ## Description
