@@ -98,16 +98,16 @@ Formulas for calculations: https://www.omnicalculator.com/math
 ## Future plans
 * * *
 ### Shapes to be added in the future
-- Sector area
-- Ellipse area
-- Trapezoid area
-- Area of a parallelogram
-- Area of a rhombus
-- Area of a kite
-- Pentagon area
-- Area of a hexagon
-- Area of an octagon
-- Area of an annulus
-- Area of a quadrilateral
-- Regular polygon area
+- Sector area & volume
+- Ellipse area & volume
+- Trapezoid area & volume
+- Area of a parallelogram & volume
+- Area of a rhombus & volume
+- Area of a kite & volume
+- Pentagon area & volume
+- Area of a hexagon & volume
+- Area of an octagon & volume
+- Area of an annulus & volume
+- Area of a quadrilateral & volume
+- Regular polygon area & volume
 
