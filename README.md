@@ -92,12 +92,12 @@ This project contains a MIT [license](./LICENSE.md)
 ## References
 * * *
 
-Formulas for calculations: https://www.omnicalculator.com/math/area#sector-area-formula
+Formulas for calculations: https://www.omnicalculator.com/math
 
 
 ## Future plans
 * * *
-### shapes to be added in the future
+### Shapes to be added in the future
 - Sector area
 - Ellipse area
 - Trapezoid area
