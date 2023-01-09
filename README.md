@@ -1,5 +1,7 @@
 # 3D Shape Calculations
 * * *
+Feel free to get into contact, if you wish to work on this module. to keep in mind that this is more of a passion/tester project, than a seroius module to be used. 
+
 A module with functions for the calculation of volume, Curved surface area and Total surface area of 3D shapes
 
 
