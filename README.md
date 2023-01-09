@@ -47,7 +47,7 @@ To create a new environment which contains all the required packages plus the ri
   conda env create -f environment.yml
 ```
 
-This will create a new environment named `mosquito_env` which can be used to run this repository.
+This will create a new environment named `enviroment_env` which can be used to run this repository.
 
 > NOTE: the environment.yml is located in the install/ directory [here](install/environment.yml).
 
