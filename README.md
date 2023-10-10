@@ -37,6 +37,8 @@ This module provides a set of functions for calculating the volume, curved surfa
 - calculate_area_sphere
 - calculate_area_hemisphere
 - calculate_area_sector
+- calculate_area_ellipse
+- calculate_area_trapezoid
 
 ## Installation
 * * *
