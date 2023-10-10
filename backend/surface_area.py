@@ -112,3 +112,34 @@ class SurfaceArea:
         :return: total surface area calculated
         """
         return 3 * math.pi * (radius ** 2)
+    
+    @staticmethod
+    def calculate_area_sector(radius, angle):
+        """
+        Function to calculate the area of a sector
+        :param radius: radius of sector
+        :param angle: angle of sector
+        :return: total area calculated
+        """
+        return 0.5 * (radius ** 2) * angle
+    
+    @staticmethod
+    def calculate_area_ellipse(major_axis, minor_axis):
+        """
+        Function to calculate the area of an ellipse
+        :param major_axis: major axis of ellipse
+        :param minor_axis: minor axis of ellipse
+        :return: total area calculated
+        """
+        return math.pi * major_axis * minor_axis
+    
+    @staticmethod
+    def calculate_area_trapezoid(base1, base2, height):
+        """
+        Function to calculate the area of a trapezoid
+        :param base1: base1 of trapezoid
+        :param base2: base2 of trapezoid
+        :param height: height of trapezoid
+        :return: total area calculated
+        """
+        return 0.5 * (base1 + base2) * height

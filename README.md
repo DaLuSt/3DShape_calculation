@@ -36,6 +36,7 @@ This module provides a set of functions for calculating the volume, curved surfa
 - calculate_area_cone
 - calculate_area_sphere
 - calculate_area_hemisphere
+- calculate_area_sector
 
 ## Installation
 * * *
@@ -100,9 +101,9 @@ Formulas for calculations: https://www.omnicalculator.com/math
 ## Future plans
 * * *
 ### Shapes to be added in the future
-- Sector area & volume
-- Ellipse area & volume
-- Trapezoid area & volume
+- Sector volume
+- Ellipse volume
+- Trapezoid volume
 - Area of a parallelogram & volume
 - Area of a rhombus & volume
 - Area of a kite & volume
