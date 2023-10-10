@@ -12,194 +12,166 @@ Licence: MIT
 import math
 
 
-
 class Volume:
     """
     Calculate the volume for 3D shapes
-    definitions: 
-    calculate_volume_cube
-    calculate_volume_cuboid
-    calculate_volume_cylinder
-    calculate_volume_cone
-    calculate_volume_sphere
-    calculate_volume_hemisphere
+    Definitions:
+    - calculate_volume_cube
+    - calculate_volume_cuboid
+    - calculate_volume_cylinder
+    - calculate_volume_cone
+    - calculate_volume_sphere
+    - calculate_volume_hemisphere
     """
-
-    def __init__(self, length, width, height, radius):
+    
+    def __init__(self, length=0, width=0, height=0, radius=0):
         self.length = length
         self.width = width
         self.height = height
         self.radius = radius
 
-    def calculate_volume_cube(length):
-        """
-         Function to calculate the volume of a cube
-         :param length: length of cube
-         :return: total volume calculated
-        """
-        return length ** 3
 
-    def calculate_volume_cuboid(length, width, height):
+    def calculate_volume_cube(self):
         """
         Function to calculate the volume of a cube
-        :param length: length of cuboid
-        :param width: width of cuboid
-        :param height: height of cuboid
         :return: total volume calculated
         """
+        return self.length ** 3
 
-        return length * width * height
+    def calculate_volume_cuboid(self):
+        """
+        Function to calculate the volume of a cuboid
+        :return: total volume calculated
+        """
+        return self.length * self.width * self.height
 
-    def calculate_volume_cylinder(radius, height):
+    def calculate_volume_cylinder(self):
         """
         Function to calculate the volume of a cylinder
-        :param radius: radius of cylinder
-        :param height: height of cylinder
         :return: total volume calculated
         """
+        return math.pi * (self.radius ** 2) * self.height
 
-        return math.pi * (radius**2) * height
-
-    def calculate_volume_cone(radius, height):
+    def calculate_volume_cone(self):
         """
-        Function to calculate the volume of a cube
-        :param radius: radius of cone
-        :param height: height ofcone
+        Function to calculate the volume of a cone
         :return: total volume calculated
         """
+        return (1/3) * math.pi * (self.radius ** 2) * self.height
 
-        return (1/3) * math.pi * (radius**2) * height
-
-    def calculate_volume_sphere(radius):
+    def calculate_volume_sphere(self):
         """
         Function to calculate the volume of a sphere
-        :param radius: radius of sphere
         :return: total volume calculated
         """
+        return (4/3) * math.pi * self.radius ** 3
 
-        return (4/3) * math.pi * radius**3
-
-    def calculate_volume_hemisphere(radius):
+    def calculate_volume_hemisphere(self):
         """
         Function to calculate the volume of a hemisphere
-        :param radius: radius of hemisphere
         :return: total volume calculated
         """
-
-        return (2/3) * math.pi * radius**3
-
+        return (2/3) * math.pi * self.radius ** 3
 
 
 class CurvedSurfaceArea:
     """
     Calculate the curved surface area for 3D shapes
-    definitions: 
-    calculate_curved_area_cube
-    calculate_curved_area_cuboid
-    calculate_curved_area_cylinder
-    calculate_curved_area_cone
-    calculate_curved_area_sphere
-    calculate_curved_area_hemisphere
+    Definitions:
+    - calculate_curved_area_cube
+    - calculate_curved_area_cuboid
+    - calculate_curved_area_cylinder
+    - calculate_curved_area_cone
+    - calculate_curved_area_sphere
+    - calculate_curved_area_hemisphere
     """
 
-    def __init__(self, length, width, height, radius):
+    def __init__(self, length=0, width=0, height=0, radius=0):
         self.length = length
         self.width = width
         self.height = height
         self.radius = radius
 
-    def calculate_curved_area_cube(length):
-        """
-        Function to calculate the volume of a cube
-        :param length: length of cube
-        :return: total volume calculated
-        """
-
-        sqaure_area = SurfaceArea.calculate_area_square(length)
-        return 4 * sqaure_area
-
-    def calculate_curved_area_cuboid(length, width, height):
+    def calculate_curved_area_cube(self):
         """
         Function to calculate the curved surface area of a cube
-        :param length: length of cuboid
-        :param width: width of cuboid
-        :param height: height of cuboid
-        :return: total volume calculated
+        :return: total curved surface area calculated
         """
+        square_area = SurfaceArea.calculate_area_square(self.length)
+        return 4 * square_area
 
-        return ((2 * height) * (length + width))
+    def calculate_curved_area_cuboid(self):
+        """
+        Function to calculate the curved surface area of a cuboid
+        :return: total curved surface area calculated
+        """
+        return 2 * (self.height * (self.length + self.width))
 
-    def calculate_curved_areae_cylinder(radius, height):
+    def calculate_curved_area_cylinder(self):
         """
         Function to calculate the curved surface area of a cylinder
-        :param radius: radius of cylinder
-        :param height: height of cylinder
-        :return: total volume calculated
+        :return: total curved surface area calculated
         """
+        return 2 * math.pi * self.radius * self.height
 
-        return (2 * math.pi) * radius * height
-
-    def calculate_curved_area_cone(radius, length):
+    def calculate_curved_area_cone(self):
         """
-        Function to calculate the curved surface area of a cube
-        :param radius: radius of cone
-        :param height: length ofcone
-        :return: total volume calculated
+        Function to calculate the curved surface area of a cone
+        :return: total curved surface area calculated
         """
+        slant_height = math.sqrt(self.radius ** 2 + self.height ** 2)
+        return math.pi * self.radius * slant_height
 
-        return math.pi * radius * length
-
-    def calculate_curved_area_sphere(radius):
+    def calculate_curved_area_sphere(self):
         """
         Function to calculate the curved surface area of a sphere
-        :param radius: radius of sphere
-        :return: total volume calculated
+        :return: total curved surface area calculated
         """
+        return 4 * math.pi * self.radius ** 2
 
-        return 4 * math.pi * (radius**2)
-
-    def calculate_curved_area_hemisphere(radius):
+    def calculate_curved_area_hemisphere(self):
         """
         Function to calculate the curved surface area of a hemisphere
-        :param radius: radius of hemisphere
-        :return: total volume calculated
+        :return: total curved surface area calculated
         """
+        return 2 * math.pi * self.radius ** 2
 
-        return 2 * math.pi * (radius**2)
     
-   
+
 class SurfaceArea:
     """
     Calculate the total surface area of shapes
-    definitions: 
-    Shapes: 
-    calculate_area_sqaure
-    calculate_area_rectangle
-    calculate_area_circle
-    calculate_area_triagle
-    3D Shapes:
-    calculate_area_cube
-    calculate_area_cuboid
-    calculate_area_cylinder
-    calculate_area_cone
-    calculate_area_sphere
-    calculate_area_hemisphere
+    Definitions:
+    - Shapes:
+      - calculate_area_square
+      - calculate_area_rectangle
+      - calculate_area_circle
+      - calculate_area_triangle
+    - 3D Shapes:
+      - calculate_area_cube
+      - calculate_area_cuboid
+      - calculate_area_cylinder
+      - calculate_area_cone
+      - calculate_area_sphere
+      - calculate_area_hemisphere
     """
 
-    def __init__(self, length, width, height, radius):
+    def __init__(self, length=0, width=0, height=0, radius=0):
         self.length = length
         self.width = width
         self.height = height
         self.radius = radius
 
+    @staticmethod
     def calculate_area_square(length):
         """
-        Function to calculate area of a square given a length
+        Function to calculate the area of a square given a length
         :param length: int
         :return: total area calculated
         """
         return length ** 2
 
+    @staticmethod
     def calculate_area_rectangle(width, height):
         """
         Function to calculate the area of a rectangle
@@ -207,81 +179,76 @@ class SurfaceArea:
         :param height: int height of the rectangle
         :return: total area calculated
         """
-
         return width * height
 
+    @staticmethod
     def calculate_area_circle(radius):
         """
         Function to calculate the area of a circle
         :param radius: radius of circle
         :return: total area calculated
         """
-
         return math.pi * (radius ** 2)
 
-    def calculate_area_triangle(width, height):
+    @staticmethod
+    def calculate_area_triangle(base, height):
         """
         Function to calculate the area of a triangle
-        :param width: width of triangle
+        :param base: base width of triangle
         :param height: height of triangle
         :return: total area calculated
         """
-        square_area = SurfaceArea.calculate_area_rectangle(width, height)
-        return square_area / 2
+        return 0.5 * base * height
 
+    @staticmethod
     def calculate_area_cube(length):
         """
-        Function to calculate the area of a cube
-        :param : length of cude
-        :return: total area calculated
+        Function to calculate the surface area of a cube
+        :param length: length of cube
+        :return: total surface area calculated
         """
-        sqaure_area = SurfaceArea.calculate_area_square(length)
-        return 6 * sqaure_area
+        return 6 * SurfaceArea.calculate_area_square(length)
 
-    def calculate_area_cuboid(length, width, height):
+    def calculate_area_cuboid(self):
         """
-        Function to calculate the area of a cuboid
-        :param length: length of cuboid
-        :param width: width of cuboid
-        :param height: height of cuboid
-        :return: total area calculated
+        Function to calculate the surface area of a cuboid
+        :return: total surface area calculated
         """
-        return 2 * ((length * width) +
-                    (width * height) +
-                    (height * length))
+        return 2 * ((self.length * self.width) +
+                    (self.width * self.height) +
+                    (self.height * self.length))
 
-    def calculate_area_cylinder(height, radius):
+    def calculate_area_cylinder(self):
         """
-        Function to calculate the area of a cylinder
-        :param radius: radius of cylinder
-        :param height: height of cylinder
-        :return: total area cylinder
+        Function to calculate the surface area of a cylinder
+        :return: total surface area calculated
         """
-        return ((2 * math.pi * radius * height) +
-                      (2 * math.pi * (radius**2)))
+        return (2 * math.pi * self.radius * self.height) + (2 * math.pi * (self.radius ** 2))
 
-    def calculate_area_cone(length, radius):
+    def calculate_area_cone(self):
         """
-        Function to calculate the area of a cone
-        :param width: width of cone
-        :param height: height of cone
-        :return: total area calculated
+        Function to calculate the surface area of a cone
+        :return: total surface area calculated
         """
-        return math.pi * radius * (radius + length)
+        slant_height = math.sqrt(self.radius ** 2 + self.height ** 2)
+        return math.pi * self.radius * (self.radius + slant_height)
 
+    @staticmethod
     def calculate_area_sphere(radius):
         """
-        Function to calculate the area of a sphere
+        Function to calculate the surface area of a sphere
         :param radius: radius of sphere
-        :return: total area calculated
+        :return: total surface area calculated
         """
-        return 4 * math.pi * (radius**2)
+        return 4 * math.pi * (radius ** 2)
 
+    @staticmethod
     def calculate_area_hemisphere(radius):
         """
-        Function to calculate the area of a hemisphere
+        Function to calculate the surface area of a hemisphere
         :param radius: radius of hemisphere
-        :return: total area calculated
+        :return: total surface area calculated
         """
-        return 3 * math.pi * radius**2
+        return 3 * math.pi * (radius ** 2)
+
 
